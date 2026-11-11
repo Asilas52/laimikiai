@@ -4,6 +4,14 @@
 #include <iomanip>
 using namespace std;
 struct laimikis{string pav;int kiekis;double gylis;double laik;};
+void vidurkis (laimikis a[],int n){
+    int sum=0; int i=0;
+    while (i<n){
+        sum+=laimikis;
+        i++;
+    }
+    cout<<"vidurkis "<<sum/n;
+}
 int skaityti(laimikis a[]){
     string tempkiek,tempg,pavadinimai,templ;
     int n=0;
@@ -43,6 +51,7 @@ int main()
     laimikis a[100];
     skaityti(a);
     suvestines(a);
+    vidurkis(a,skaityti(a));
     cout<<"is viso "<<skaityti(a)<<endl;
     cout<<"trecio gylis "<<a[2].gylis;
     return 0;
