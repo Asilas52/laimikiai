@@ -22,7 +22,7 @@ int skaityti(laimikis a[]){
     if (tempkiek==""){a[n].kiekis=0;}
     else{a[n].kiekis=stoi(tempkiek);}
     getline(z,tempg,',');
-    if (tempg==""){a[n].gylis=-1;}
+    if (tempg==""){a[n].gylis=-1;unknowns++;}
     else {a[n].gylis=stod(tempg);}
     getline(z,templ);
     a[n].laik=stod(templ);
@@ -54,6 +54,7 @@ int main()
     vidurkis(a,skaityti(a));
     cout<<"is viso "<<skaityti(a)<<endl;
     cout<<"trecio gylis "<<a[2].gylis;
+    cout<<"Nezinomas gylis: "<<unknowns;
     return 0;
 }
 
