@@ -4,6 +4,7 @@
 #include <iomanip>
 using namespace std;
 struct laimikis{string pav;int kiekis;double gylis;double laik;};
+int unknowns=0;
 void vidurkis (laimikis a[],int n){
     int sum=0; int i=0;
     while (i<n){
