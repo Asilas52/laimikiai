@@ -4,6 +4,7 @@
 #include <iomanip>
 using namespace std;
 struct laimikis{string pav;int kiekis;double gylis;double laik;};
+int unknowns=0;
 int skaityti(laimikis a[]){
     string tempkiek,tempg,pavadinimai,templ;
     int n=0;
@@ -14,7 +15,7 @@ int skaityti(laimikis a[]){
     if (tempkiek==""){a[n].kiekis=0;}
     else{a[n].kiekis=stoi(tempkiek);}
     getline(z,tempg,',');
-    if (tempg==""){a[n].gylis=-1;}
+    if (tempg==""){a[n].gylis=-1;unknowns++;}
     else {a[n].gylis=stod(tempg);}
     getline(z,templ);
     a[n].laik=stod(templ);
@@ -45,6 +46,7 @@ int main()
     suvestines(a);
     cout<<"is viso "<<skaityti(a)<<endl;
     cout<<"trecio gylis "<<a[2].gylis;
+    cout<<"Nezinomas gylis: "<<unknowns;
     return 0;
 }
 
